@@ -6,7 +6,6 @@ import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.util.Formatter;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
@@ -35,6 +34,8 @@ public class ContactsRepo {
         try (PrintWriter pw = new PrintWriter(file)){
             pw.println(ctc.getId());
             pw.flush();
+            pw.println(ctc.getName());
+            pw.flush();
             pw.println(ctc.getEmail());
             pw.flush();
             pw.println(ctc.getPhoneNum());
@@ -44,5 +45,6 @@ public class ContactsRepo {
             // pw.println(ctc.getBirthday().toString());
             // pw.flush();
         }
+
     }
 }

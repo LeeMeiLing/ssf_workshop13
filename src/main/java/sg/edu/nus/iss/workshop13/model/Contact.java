@@ -23,6 +23,10 @@ public class Contact {
     }
 
     
+    public Contact(String id) {
+        this.id = id;
+    }
+
     public Contact(String name, String email, String phoneNum, Date birthday) {
         this.id = this.generateId(8);;
         this.name = name;
